@@ -1,0 +1,156 @@
+a {
+    color: #000;
+    text-decoration: none !important;
+    border: 0;
+}
+
+
+.store {
+    position: relative;
+}
+
+.active_item a {
+    position: relative;
+}
+
+.active_item a:before {
+    position: absolute;
+    bottom: -5px;
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: #456EEF;
+    border-radius: 999px;
+    border: 2px solid #456EEF;
+
+}
+
+/*.goods_img {*/
+/*    trans*/
+/*}*/
+/*.goods_img:hover {*/
+
+/*}*/
+
+.classification {
+    position: fixed;
+    top: 176px;
+
+
+}
+
+.classification dt {
+
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.classification dd {
+
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.item .thumbnail {
+    border: 0;
+}
+
+.item .thumbnail h3,
+.item .thumbnail p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item .thumbnail h3 {
+    font-weight: 700;
+
+}
+
+.item .thumbnail p {
+    font-size: 18px;
+    text-align: center;
+}
+
+.item .thumbnail .btn_p,
+.item .thumbnail .btn {
+    display: block;
+    width: 100%;
+}
+
+.item .thumbnail .btn {
+    background-color: #456EEF;
+    border-radius: 99px;
+}
+
+.total {
+
+
+    float: right;
+    max-width: 75%;
+    font-size: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+
+}
+
+.bag {
+    position: relative;
+    margin: 4px auto auto;
+
+
+    height: 18px;
+    width: 15px;
+    background: url("../icons/bag.png") no-repeat center;
+    background-size: contain;
+}
+
+.bag .count {
+    position: absolute;
+    padding: 0 2px;
+    top: -5px;
+    left: 16px;
+    height: 16px;
+    min-width: 16px;
+    background-color: red;
+    border-radius: 9999px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 16px;
+}
+
+.circle {
+    float: right;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 3px solid #456EEF;
+}
+
+@media screen and (max-width: 990px) {
+    .classification {
+        position: static;
+
+    }
+
+    .classification dd {
+        /*padding: 0 5%;*/
+        width: 25%;
+        margin: 10px 0;
+        text-align: center;
+        float: left;
+    }
+
+    .cart {
+        position: absolute;
+
+        top: 0;
+        right: 0;
+    }
+}
+
+.page_navigation {
+    text-align: center;
+}

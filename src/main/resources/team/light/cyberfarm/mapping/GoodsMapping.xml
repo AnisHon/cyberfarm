@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="team.light.cyberfarm.mapping.GoodsMapping">
+
+    <resultMap id="productColumnMap" type="productColumn">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="price" property="price"/>
+        <result column="picture01" property="coverUrl"/>
+    </resultMap>
+
+<!--    List<ProductColumn> selectLimitedProductColumn(@Param("category") int category, @Param("beg") int beg, @Param("limit") int limit);-->
+    <select id="selectProductColumn" resultMap="">
+        select id, name, price, picture01 from goods where category = #{category} limit #{beg}, #{limit};
+    </select>
+</mapper>

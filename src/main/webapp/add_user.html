@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加用户</title>
+</head>
+<body>
+
+<form method="post" action="mod/addUser">
+    <div>
+        <label for="username">username</label><input type="text" name="username" id="username">
+        <label for="password">password</label><input type="text" name="password" id="password">
+        <label for="tel">tel</label><input type="tel" name="tel" id="tel">
+        <label for="gender">gender</label><select name="gender" id="gender">
+            <option value="0">男</option>
+            <option value="1">女</option>
+            <option value="2">阿帕奇武装直升机</option>
+            <option value="3">沃尔玛购物袋</option>
+        </select>
+        <label for="level">level</label><select name="level" id="level">
+        <option value="0">管理员</option>
+        <option value="1">普通用户</option>
+    </select>
+
+    </div>
+    <div>
+        <button type="submit">提交</button>
+    </div>
+</form>
+
+</body>
+</html>

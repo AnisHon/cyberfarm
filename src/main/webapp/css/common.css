@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'iconfont';
+    src: url('../fonts/iconfont.woff2?t=1707170425439') format('woff2'),
+    url('../fonts/iconfont.woff?t=1707170425439') format('woff'),
+    url('../fonts/iconfont.ttf?t=1707170425439') format('truetype');
+}
+
+
+.body {
+    font: 16px/1.5 "Microsoft YaHei";
+    background-color: #ffffff;
+}
+
+@media screen and (min-width: 1366px) {
+    .container {
+        width: 1366px;
+    }
+}
+
+.nav_common {
+
+    border: 0;
+    background-color: #ffffff;
+
+}
+
+.nav_common .navbar-header a,
+.nav_common .nav  li a {
+    color: #000;
+}
+
+.nav_common .navbar-header a {
+
+    font-size: 20px;
+    font-weight: 540;
+}
+.nav_common .nav  li a {
+    font-family: "Roboto", "Microsoft YaHei", serif;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 16px;
+}
+
+.nav_common .nav li:hover a {
+    background-color: #E7E7E7;
+}
+/*.nav_common .nav li.active:hover a,*/
+.nav_common .nav .active a  {
+
+    background-color: #ffffff;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nav_common .navbar-right .btn {
+
+
+    padding: 6px 40px;
+    border: 1px solid #456EEF;
+    border-radius: 999999px;
+    color: #456EEF;
+}
+
+.dont_display {
+    display: none!important;
+}
+
+@media screen and (max-width: 750px) {
+    .nav_common .navbar-right .btn {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}

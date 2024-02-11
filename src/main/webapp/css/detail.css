@@ -1,0 +1,178 @@
+.container .navbar .navbar-right li a {
+    font-family: "iconfont", "Microsoft YaHei", serif;
+    vertical-align: bottom;
+}
+
+.container .navbar .navbar-right span {
+    vertical-align: middle;
+    font-size: 20px;
+    color: #456EEF;
+}
+
+.main {
+    max-width: 500px;
+    width: 100%;
+}
+
+.goods_content {
+    margin-top: 91px;
+}
+
+.goods_img .small {
+    max-width: 226px;
+    margin: auto;
+}
+
+.goods_img .little {
+    margin: 43px 19px 0 19px;
+    max-width: 73px;
+    height: 73px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+
+.goods_detail > h3 {
+    margin-top: 53px;
+    font-size: 26px;
+}
+
+.goods_detail > p {
+    margin-top: 54px;
+    font-size: 28px;
+}
+
+.post {
+    margin-bottom: 23px;
+    font-weight: 700;
+}
+
+.goods_detail .detail_text ul {
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.goods_detail .detail_text ul li {
+    float: left;
+    width: 33%;
+    height: 40px;
+
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+
+
+}
+
+.active_item {
+    color: #456EEF;
+    border-bottom: 1px solid #456EEF;
+}
+
+.goods_detail .detail_text ul li:hover {
+    background-color: #e8e8e8;
+}
+
+.purchase {
+
+    max-width: 247px;
+    height: 413px;
+    padding: 24px 20px;
+    border: 1px solid #e8e8e8;
+    border-radius: 9px;
+}
+
+.count_input {
+    max-width: 54px;
+}
+
+.count button {
+    height: 22px;
+    width: 30px;
+    border-radius: 5px;
+    border: 0;
+    vertical-align: top;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.btn_add {
+    color: white;
+    background-color: #456EEF;
+}
+
+.count input {
+    height: 22px;
+    width: 30px;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid #456EEF;
+
+    text-align: center;
+    font-weight: 700;
+}
+
+.count button,
+.count input {
+    margin: 0;
+}
+
+.count p {
+    font-size: 16px;
+}
+
+.count span {
+    font-size: 16px;
+}
+
+.goods_name {
+    margin-top: 40px;
+}
+
+.goods_producer {
+    margin: 32px 0;
+}
+
+.goods_name,
+.goods_producer {
+
+    font-weight: 700;
+    font-size: 16px;
+    color: #456EEF;
+}
+
+.total {
+    line-height: 100%;
+    font-size: 16px;
+}
+
+.total .price {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.purchase .submit {
+    margin-top: 32px;
+    color: white;
+    background-color: #456EEF;
+}
+
+.return {
+    color: #456EEF;
+    border-color: #456EEF;
+}
+
+.submit,
+.return {
+    margin: 12px 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 970px) {
+    .purchase {
+        margin: auto;
+    }
+}

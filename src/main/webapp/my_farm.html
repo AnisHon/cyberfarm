@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>我的农场</title>
+    <link rel="shortcut icon" href="icons/index/genshin_impact.ico" type="image/x-icon">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"
+          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/my_farm.css">
+</head>
+<body>
+
+
+<nav class="navbar navbar-default fixed-top nav_common">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+
+        <div class="container">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">元宇宙农业</a>
+            </div>
+
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="goods.html">商品</a></li>
+                    <li class="active"><a href="#">我的农场</a></li>
+                    <li><a href="about_us.html">关于我们</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dont_display"><a href="my_farm.html"><span>&#xeb24;</span> AnisHan</a></li>
+                    <li>
+
+                        <a href="login.html" type="button" class="btn btn-default navbar-btn ">登录</a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div><!-- /.navbar-collapse -->
+
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="container">
+
+    <div>
+
+        <div class="person">
+            <div class="row user">
+                <div class="user_img col-sm-2 col-xs-12">
+                    <img src="icons/userphoto.png" alt="user">
+                </div>
+
+                <div class="user_info col-sm-10 col-xs-12">
+                    <h2><span class="username"></span></h2>
+                    <p></p>
+                    <p>性别：<span class="gender"></span></p>
+                </div>
+
+            </div>
+            <ul class="nav nav-tabs">
+                <li role="presentation" class="active"><a href="#cart" data-toggle="tab">我的购物车</a></li>
+                <li role="presentation"><a href="#person" data-toggle="tab">个人资料</a></li>
+                <li role="presentation"><a href="#change" data-toggle="tab">修改个人资料</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="cart">
+
+
+            <div>
+                <div class="panel cart_panel">
+                    <!-- Table -->
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>商品名称</th>
+                            <th>数量</th>
+                            <th>删除</th>
+                        </tr>
+                        </thead>
+
+                        <tbody class="tbody">
+                        <tr class="cart_template dont_display">
+                            <td>你好</td>
+                            <td></td>
+                            <td>
+                                <button data-id="" role="button" class="btn-default btn">不想要了</button>
+                            </td>
+                        </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+                <div class="btn-group" role="group">
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                        提交订单
+                    </button>
+
+                    <button type="button" class="btn btn-default" id="empty">清空购物车</button>
+                </div>
+            </div>
+
+
+            <p class="tip">
+                购物车里什么也没有
+            </p>
+        </div>
+
+        <div role="tabpanel" class="tab-pane fade " id="person">
+
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+
+                <div class="panel-body">
+                    <p>
+                        注：原本将会有头像系统，更真实好用的购物车系统，但是由于本页面全部采用Ajax前后端交互 +
+                        jQuery页面渲染并没有 采用主流的Vue，而且服务端没有学习Spring SpringBoot SpringMVC
+                        对于写过于复杂的业务逻辑将会是灾难级别 以及项目并不真正需要使用所以只能无奈放弃。<br>
+                    </p>
+                    <br>
+
+                    <h3>还有这一大段话是主要为了显得这里不那么空，服务器没有做多余防护可能有BUG</h3>
+                </div>
+
+                <!-- List group -->
+                <ul class="list-group">
+                    <li class="list-group-item">用户：<span id="displayUsername" class="username"></span></li>
+                    <li class="list-group-item">手机号：<span id="displayTel" class="tel"></span></li>
+                    <li class="list-group-item">性别：<span id="displayGender" class="gender"></span>
+                    </li>
+                    <li class="list-group-item">创建时间：<span id="displayData" class="data"></span></li>
+                    <li class="list-group-item">用户级别：<span id="displayLevel" class="level"></span></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div role="tabpanel" class="tab-pane fade " id="change">
+
+            <form class="form-horizontal" style="margin-top: 40px" method="get" action="#">
+                <div class="form-group">
+                    <label for="inputUsername" class="col-sm-2 control-label">用户名</label>
+                    <div class="col-sm-10">
+                        <input name="username" type="text" class="form-control" id="inputUsername">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputTel" class="col-sm-2 control-label">手机</label>
+                    <div class="col-sm-10">
+                        <input name="tel" type="tel" class="form-control" id="inputTel">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+                    <div class="col-sm-10">
+                        <input name="password" type="password" class="form-control" id="inputPassword3">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="selectGender" class="col-sm-2 control-label">性别</label>
+                    <div class=" col-sm-10">
+                        <select name="gender" id="selectGender" class="form-control select">
+                            <option value="0" style="color: black;">男</option>
+                            <option value="1" style="color: black;">女</option>
+                            <option value="2" style="color: black;">阿帕奇武装直升机</option>
+                            <option value="3" style="color: black;">沃尔玛购物袋</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">更改信息</button>
+                    </div>
+                </div>
+
+            </form>
+
+            <p>
+                如果不想更改密码，密码框留空 <br>
+                不合法密码（长度不短于8）也不会改密码
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        不支持的网络异常
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    请链接火星网络进行支付
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+</div>
+
+<script src="lib/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+<script src="js/myFarm.js"></script>
+
+</body>
+
+</html>

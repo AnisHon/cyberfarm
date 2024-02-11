@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品上传管理页面</title>
+
+    <style>
+        input, textarea, select {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="mod/uploadGoods" enctype="multipart/form-data">
+        <label for="name">name</label><input type="text" name="name" id="name">
+        <label for="category">类别</label><select name="category" id="category">
+        <option value="0">水果</option>
+        <option value="1">蔬菜</option>
+        <option value="2">粮食作物</option>
+        <option value="3">药用作物</option>
+        </select>
+        <label for="price">价格以分为单位</label><input type="number" name="price" id="price">
+        <label for="detailText">产品介绍</label><textarea name="detailText" id="detailText" cols="30" rows="10"></textarea>
+        <label for="producer">产地</label><input type="text" name="producer" id="producer">
+        <label for="comment">评论</label><textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+        <div>
+            <input type="file" name="img-file1" accept="image/*">
+            <input type="file" name="img-file2" accept="image/*">
+        </div>
+        <div>
+            <button>上传文件</button>
+        </div>
+    </form>
+</body>
+</html>

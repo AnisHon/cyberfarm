@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>登录</title>
+    <link rel="shortcut icon" href="icons/index/genshin_impact.ico" type="image/x-icon">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"
+          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-6 login_form">
+
+            <div class="row inner_box">
+                <img class="fish" src="icons/fish.png" alt="fish">
+
+                <h1>登录</h1>
+                <p class="text-muted">LOG IN</p>
+
+                <button class="google btn btn-default">
+                    Sign in with Google
+                </button>
+
+                <div>
+                    <div class="line_box">
+                        <span class="line"></span>
+                        <span class="text">or Sign in with Email</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+
+
+                <form class="login">
+                    <div class="text_">
+                        <div class="form-group">
+                            <label for="tel">Phone<span class="blue_text">*</span></label>
+                            <input type="tel" class="form-control" id="tel" placeholder="+86">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password<span class="blue_text">*</span></label>
+                            <input type="password" class="form-control" id="password" placeholder="请输入密码">
+                        </div>
+                    </div>
+
+                    <div class="bottom clearfix">
+                        <div class="checkbox pull-left">
+                            <label>
+                                <input checked="checked" type="checkbox"> 同意用户协议
+                            </label>
+                        </div>
+
+                        <span class="pull-right">还没有账号？<a href="registration.html">点击注册</a></span>
+
+                    </div>
+
+                    <button type="submit" class="btn btn-default">登录</button>
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</div>
+
+<script src="lib/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+</body>
+</html>

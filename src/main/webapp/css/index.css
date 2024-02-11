@@ -1,0 +1,85 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+.row .index_img img {
+    margin-right: 10%;
+    width: 90%;
+}
+
+.mid {
+    margin-top: 120px;
+}
+
+.row .title {
+
+    padding-left: 20%;
+
+}
+
+.row .title h1 {
+    font-size: 48px;
+}
+
+.row .title p {
+    margin-top: 50px;
+}
+
+.row .btn {
+    margin-top: 30px;
+    padding: 5px 30px;
+    border-radius: 9999px;
+    background-color: #456EEF;
+    font-size: 36px;
+}
+
+@keyframes cover {
+    0% {
+        background: url("../images/cover/cover1.jpg") no-repeat center;
+        background-size: cover;
+    }
+
+    50% {
+        background: url("../images/cover/cover2.jpg") no-repeat center;
+        background-size: cover;
+    }
+
+    70% {
+        background: url("../images/cover/cover3.jpg") no-repeat center;
+        background-size: cover;
+    }
+
+    100% {
+        background: url("../images/cover/cover1.jpg") no-repeat center;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .title {
+        margin: 0;
+        padding: 0 !important;
+        text-align: center;
+        background-color: transparent;
+
+    }
+
+    .mid {
+        background-color: transparent;
+    }
+
+    body {
+        animation: cover 20s infinite backwards;
+        /*background: url("../images/gu_tianle.jpg") no-repeat center;*/
+        /*background-size: cover;*/
+    }
+    .row .btn {
+
+        background-color: transparent;
+
+    }
+}

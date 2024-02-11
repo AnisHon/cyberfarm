@@ -1,0 +1,73 @@
+html {
+    height: 100%;
+}
+
+
+.person {
+
+
+    height: 350px;
+    background: url("../icons/personal_page.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.person .user {
+    color: white;
+    padding: 40px;
+
+
+}
+
+.person .user .user_img img {
+    display: block;
+    height: 100%;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.person .user .user_img {
+
+    padding: 0;
+    height: 128px;
+
+}
+
+.person {
+    position: relative;
+}
+
+.person .nav {
+    position: absolute;
+    margin-left: 20px;
+
+    bottom: 0;
+    background-color: transparent;
+
+}
+
+.person li a {
+    color: white;
+}
+
+.person li:hover a {
+    color: black;
+}
+
+.cart_page {
+    width: 100%;
+    height: 100px;
+    background-color: pink;
+    overflow: scroll;
+}
+
+.cart_panel {
+    height: 400px;
+    max-height: 400px;
+    overflow: auto;
+
+}
+
+
+.cart_items {
+
+}

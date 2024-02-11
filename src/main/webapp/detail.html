@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>植株详情</title>
+    <link rel="shortcut icon" href="icons/index/genshin_impact.ico" type="image/x-icon">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"
+          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/detail.css">
+</head>
+<body>
+
+<div class="container">
+    <nav class="navbar navbar-default fixed-top nav_common">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">元宇宙农业</a>
+            </div>
+
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="goods.html">商品</a></li>
+                    <li><a href="my_farm.html">我的农场</a></li>
+                    <li><a href="about_us.html">关于我们</a></li>
+                </ul>
+                <!--                <a href="login.html" type="button" class="btn btn-default navbar-btn navbar-right ">登录</a>-->
+                <!--                <a class=".navbar-text .navbar-link navbar-right" href="">&#xeb24; AnisHan</a>-->
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="my_farm.html"><span>&#xeb24;</span> AnisHan</a></li>
+                    <li><a class="btn btn-default navbar-btn" href="login.html">登录</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+
+        </div><!-- /.container-fluid -->
+    </nav>
+
+
+    <div class="goods_content">
+        <div class="col-md-5 col-xs-12 goods_img">
+            <img class="main" src="images/detail1.png" alt="img">
+            <div class="small">
+                <img class="little" src="images/detail2.png" alt="img2">
+                <img class="little" src="images/detail2.png" alt="img2">
+            </div>
+
+        </div>
+
+        <div class="goods_detail col-xs-12 col-md-4">
+            <h3>小麦</h3>
+            <p>$ <span id="single_price">200.500</span></p>
+
+            <div class="detail_text">
+                <ul class="clearfix">
+                    <li class="col_list active_item" data-col="1">详情</li>
+                    <li class="col_list" data-col="2">产地</li>
+                    <li class="col_list" data-col="3">评价</li>
+                </ul>
+
+                <p class="col_1 col" id="detail">
+                </p>
+
+
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-md-3">
+            <div class="row purchase">
+                <form method="post" action="#">
+                    <h4 class="post">下单</h4>
+                    <div class="count">
+
+                        <button type="button" class="btn_minus" id="minus">-</button>
+
+                        <label for="count"></label><input disabled="disabled" class="count_input" type="text" id="count"
+                                                          value="1"
+                                                          name="count">
+                        <button type="button" class="btn_add" id="add">+</button>
+                        <span>最大数量10</span>
+
+
+                    </div>
+
+                    <h4 class="goods_name">转基因高产水稻</h4>
+                    <h4 class="goods_producer">湖北武汉老坛酸菜农场</h4>
+
+                    <span class="total clearfix">
+                        <span class="text pull-left">合计</span>
+                        <span class="price pull-right">$ <span id="price">10000</span></span>
+                    </span>
+
+                    <input type="submit" class="btn btn-default submit" value="种植">
+                    <a href="goods.html" type="submit" class="btn btn-default return">返回</a>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<script src="lib/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+<script src="js/detail.js"></script>
+</body>
+</html>

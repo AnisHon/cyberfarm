@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>商品</title>
+    <link rel="shortcut icon" href="icons/index/genshin_impact.ico" type="image/x-icon">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"
+          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/goods.css">
+
+    <link rel="stylesheet" href="css/page.css">
+</head>
+<body>
+
+<div class="container">
+    <nav class="navbar navbar-default fixed-top nav_common">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">元宇宙农业</a>
+            </div>
+
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">首页</a></li>
+                    <li class="active"><a href="#">商品</a></li>
+                    <li><a href="my_farm.html">我的农场</a></li>
+                    <li><a href="about_us.html">关于我们</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dont_display"><a href="my_farm.html"><span>&#xeb24;</span> AnisHan</a></li>
+                    <li>
+
+                        <a href="login.html" type="button" class="btn btn-default navbar-btn ">登录</a>
+                    </li>
+                </ul>
+
+
+            </div><!-- /.navbar-collapse -->
+
+        </div><!-- /.container-fluid -->
+    </nav>
+
+
+    <div class="row store">
+
+        <div class="col-md-3 clearfix">
+
+            <dl class="classification clearfix">
+                <dt>植物种类</dt>
+                <dd><a href="javascript:void(0)" data-id="0">水果</a></dd>
+                <dd class="active_item" data-id="1"><a href="javascript:void(0)">蔬菜</a></dd>
+                <dd><a href="javascript:void(0)" data-id="2">粮食作物</a></dd>
+                <dd><a href="javascript:void(0)" data-id="3">药用作物</a></dd>
+            </dl>
+
+
+        </div>
+
+        <div class="col-md-7">
+
+
+            <div class="row item">
+                <div class="col-xs-6 col-md-4 item_template" hidden="hidden">
+                    <div class="thumbnail">
+                        <div class="caption">
+                            <h3>Cupping Fancy</h3>
+                        </div>
+
+                        <img src="images/img.png" alt="img">
+
+
+                        <div class="caption">
+
+                            <p>$18.000</p>
+                            <p class="btn_p"><a href="detail.html" class="btn btn-primary" role="button">PLANT</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!--            page navigation-->
+            <div style="text-align: center;margin:250px auto;">
+                <div id="pager" class="pager clearfix">
+                </div>
+            </div>
+            <!--            <nav aria-label="page" class="page_navigation">-->
+            <!--                <ul class="pagination">-->
+            <!--                    <li>-->
+            <!--                        <a href="#" aria-label="Previous" class="nav_next">-->
+            <!--                            <span aria-hidden="true">&laquo;</span>-->
+            <!--                        </a>-->
+            <!--                    </li>-->
+            <!--                    <li><a href="#" class="dont_display li_template"></a></li>-->
+            <!--                    <li>-->
+            <!--                        <a href="#" aria-label="Next" class="nav_next">-->
+            <!--                            <span aria-hidden="true">&raquo;</span>-->
+            <!--                        </a>-->
+            <!--                    </li>-->
+            <!--                </ul>-->
+            <!--            </nav>-->
+
+        </div>
+
+
+        <!--        cart-->
+        <div class="col-md-2 cart">
+            <div class="circle">
+                <div class="bag">
+                    <div class="count"></div>
+                </div>
+
+            </div>
+
+            <p class="total"></p>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+<script src="lib/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+<script src="js/goods.js"></script>
+<script src="js/jquery.z-pager.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    $("#pager").zPager({
+        pageCount: 0,
+        pageData: 1,
+        current: 1,
+        pageStep: 5,
+        btnShow: true,
+        ajaxSetData: false
+    });
+
+    function currentPage(currentPage) {
+        /*
+            触发页码数位置： Page/js/jquery.z-pager.js 64行
+        */
+        //todo
+        console.log("当前页码数：" + currentPage);
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+html{
+    height:100%;
+}
+
+.blue_text {
+    color: blue;
+}
+
+body {
+    height: 100%;
+    background: url("../icons/login.png") no-repeat right;
+    background-size: contain;
+}
+
+.line_box {
+    text-align: center;
+}
+.line_box .text {
+
+    position: relative;
+    top: 3px;
+    font-size: 14px;
+    color: #c4c4c4;
+}
+
+.line {
+    display: inline-block;
+
+    width: 25%;
+    border-top: 1px solid #c4c4c4;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+
+.container,
+.row,
+.login_form {
+    height: 100%;
+}
+
+.container .inner_box {
+    background-color: white;
+    padding: 0 20%;
+}
+
+.login {
+    margin-top: 20px;
+}
+
+.inner_box .fish {
+    width: 15%;
+    margin-top: 30px;
+}
+
+
+.text_ div input{
+    margin-top: 10px;
+    border-radius: 9999px;
+}
+
+
+.google,
+.login .btn{
+    width: 100%;
+    border-radius: 9999px;
+}
+
+.google {
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.google:before {
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    margin-left: -30%;
+    content: "";
+    height: 70%;
+    width: 10%;
+    background: url("../icons/google.png") no-repeat center;
+    background-size: contain;
+
+}
+
+.login .btn {
+    background-color: #456EEF;
+    padding: 10px 0;
+    margin-top: 40px;
+    color: white;
+    border-radius: 9999px;
+}
+
+.checkbox {
+    margin: 0;
+}
+
