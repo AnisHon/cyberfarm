@@ -58,6 +58,22 @@ $(() => {
             error.html("电话号码不能包含非数字")
             return false;
         }
+        let flag = false;
+        $.ajax({
+            url: './legal/checkTel?t=' + Date.now(),
+            type: 'POST',
+            data: {tel: tel.val()},
+            async: false, // 将 async 选项设置为 false
+            success: function(response) {
+                flag = (response === "Success")
+            }
+        });
+        if (!flag) {
+            error.html("改手机号已经被注册");
+            return false;
+
+        }
+
         error.html("")
         return true;
     }
@@ -76,6 +92,9 @@ $(() => {
             error.html("请选择性别")
             return false;
         }
+
+
+
         error.html("")
         return true;
     }

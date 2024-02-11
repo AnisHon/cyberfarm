@@ -13,7 +13,13 @@
     </resultMap>
 
 <!--    List<ProductColumn> selectLimitedProductColumn(@Param("category") int category, @Param("beg") int beg, @Param("limit") int limit);-->
-    <select id="selectProductColumn" resultMap="">
+    <select id="selectLimitedProductColumn" resultMap="productColumnMap">
         select id, name, price, picture01 from goods where category = #{category} limit #{beg}, #{limit};
+    </select>
+
+
+<!--    int getCategoryNum(int category);-->
+    <select id="getCategoryNum" resultType="Integer">
+        select count(goods.category) from goods where category = #{category}
     </select>
 </mapper>

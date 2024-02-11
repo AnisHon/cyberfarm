@@ -56,25 +56,35 @@
         <div class="col-md-5 col-xs-12 goods_img">
             <img class="main" src="images/detail1.png" alt="img">
             <div class="small">
-                <img class="little" src="images/detail2.png" alt="img2">
-                <img class="little" src="images/detail2.png" alt="img2">
+                <img class="little img_01" src="images/detail2.png" alt="img2">
+                <img class="little img_02" src="images/detail2.png" alt="img2">
             </div>
 
         </div>
 
         <div class="goods_detail col-xs-12 col-md-4">
-            <h3>小麦</h3>
+            <h3 class="goods_name">小麦</h3>
             <p>$ <span id="single_price">200.500</span></p>
 
             <div class="detail_text">
-                <ul class="clearfix">
-                    <li class="col_list active_item" data-col="1">详情</li>
-                    <li class="col_list" data-col="2">产地</li>
-                    <li class="col_list" data-col="3">评价</li>
-                </ul>
+                <div>
 
-                <p class="col_1 col" id="detail">
-                </p>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#detail_text" aria-controls="home" role="tab" data-toggle="tab">详情</a></li>
+                        <li role="presentation"><a href="#producer" aria-controls="profile" role="tab" data-toggle="tab">产地</a></li>
+                        <li role="presentation"><a href="#comment" aria-controls="messages" role="tab" data-toggle="tab">评论</a></li>
+
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content" style="margin-top: 30px">
+                        <div role="tabpanel" class="tab-pane active" id="detail_text">...</div>
+                        <div role="tabpanel" class="tab-pane" id="producer">...</div>
+                        <div role="tabpanel" class="tab-pane" id="comment">...</div>
+                    </div>
+
+                </div>
 
 
             </div>

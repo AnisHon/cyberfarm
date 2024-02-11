@@ -1,8 +1,6 @@
 package team.light.cyberfarm.mapping;
 
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 import team.light.cyberfarm.entity.Good;
 import team.light.cyberfarm.entity.ProductColumn;
 
@@ -16,7 +14,10 @@ public interface GoodsMapping {
 
     List<ProductColumn> selectLimitedProductColumn(@Param("category") int category, @Param("beg") int beg, @Param("limit") int limit);
 
-    @Select("select count(goods.category) from goods where category = #{category}")
+
     int getCategoryNum(int category);
+
+    @Select("select * from goods where id = #{id}")
+    Good selectGoodById(int id);
 
 }

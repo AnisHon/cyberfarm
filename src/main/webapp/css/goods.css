@@ -83,6 +83,12 @@ a {
     border-radius: 99px;
 }
 
+.item .thumbnail img {
+    height: 300px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
 .total {
 
 

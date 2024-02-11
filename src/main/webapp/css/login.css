@@ -1,6 +1,9 @@
 html{
     height:100%;
 }
+.dont_display {
+    display: none;
+}
 
 .blue_text {
     color: blue;

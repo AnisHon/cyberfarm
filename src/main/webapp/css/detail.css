@@ -10,8 +10,11 @@
 }
 
 .main {
+    height: 350px;
     max-width: 500px;
     width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
 .goods_content {
@@ -19,14 +22,17 @@
 }
 
 .goods_img .small {
-    max-width: 226px;
+    max-width: 350px;
     margin: auto;
 }
 
 .goods_img .little {
     margin: 43px 19px 0 19px;
-    max-width: 73px;
-    height: 73px;
+    height: 70px;
+    width: 100%;
+    border-radius: 10px;
+    max-width: 70px;
+    object-fit: cover;
 }
 
 ul {

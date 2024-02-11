@@ -6,7 +6,8 @@ $(() => {
     const detail_text = goods_detail.children(".detail_text");
     const p = detail_text.children("p");
     const main_img = $(".goods_img .main");
-
+    
+    
 
     $("#add").click((event) => {
         if (Number(count.val()) + 1 <= 10) {
@@ -45,8 +46,35 @@ $(() => {
     }
 
 
-    p.html(getDetailText(1));
-    updatePrice();
+    let urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
+    
+    if (productId) {
+        $.post("./detailProduct/selectProduct",
+            {
+                id: productId
+            },
+            (data) => {
+                price.html("" + data.price / 100);
+                main_img.attr('src', "upload/" + data['picture01']);
+                $(".goods_producer").html(data.producer);
+                $(".goods_name").html(data.name);
+                $(".img_01").attr("src", "upload/" + data.picture01);
+                $(".img_02").attr("src", "upload/" + data.picture02);
+                
+                $("#detail_text").html(data.detailText);
+                $("#producer").html(data.producer);
+                $("#comment").html(data.comment);
+                
+                
+                updatePrice();
+            },
+            'json'
+        );
+    }
+  
+    
+    
 
 });
 

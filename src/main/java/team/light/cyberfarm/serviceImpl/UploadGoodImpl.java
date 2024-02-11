@@ -8,12 +8,13 @@ import team.light.cyberfarm.tool.SqlSessionGetter;
 
 public class UploadGoodImpl implements UploadGood {
 
-    private final SqlSession session = SqlSessionGetter.getSession();
 
     @Override
     public void upload(Good good) {
+        SqlSession session = SqlSessionGetter.getSession();
         GoodsMapping mapper = session.getMapper(GoodsMapping.class);
         mapper.insertGood(good);
         session.commit();
+        session.close();
     }
 }

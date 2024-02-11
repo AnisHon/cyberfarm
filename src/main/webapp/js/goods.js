@@ -1,50 +1,87 @@
+
+const imgRootDir = "upload"
 $(() => {
 
+    
+    //Cart
     const total = $(".total");
     const count = $(".count");
     const rootItem = $(".item");
     const itemTemplate = $(".item_template").clone();
 
 
-    $(".classification").on("click", "a", (event) => {
+    const pageLimit = 12;
 
-        $("dd").removeClass("active_item");
-        $(event.target).parent().addClass("active_item");
-        displayGoods(rootItem, itemTemplate, 9)
+    let currentCategory = 0;
+
+    $(".classification").on("click", "a", (event) => {
+        let category = $(event.target).attr("data-id");
+        if (currentCategory !== category) {
+            $("dd").removeClass("active_item");
+            $(event.target).parent().addClass("active_item");
+            currentCategory = category;
+            getColumn(0, pageLimit, category);
+        }
+
     });
 
+    getColumn(0, pageLimit, 0);
+    
+    // total.html("$");
+    // count.html("" + countNum);
 
-    let countNum = 12;
-    let price = 100;
-    displayGoods(rootItem, itemTemplate, 12);
-    total.html("$" + price);
-    count.html("" + countNum);
+
+    // http://localhost:8080/cyberfarm_war_exploded/
+
+    function getColumn(begPage, pageLimit, categoryIndex) {
+        $.post("./productColumn/selectAll?t=" + Date.now(), {
+            begin: begPage,
+            limit: pageLimit,
+            category: categoryIndex
+        }, (data) => {
+            console.log(data)
+
+            displayGoods(rootItem, itemTemplate, data.columns); 
+
+            // init(begPage, data.total);
+        }, 'json')
+    }
+    function displayGoods(root_item, itemTemplateClone, dataColumns) {
+        root_item.empty();
+        itemTemplateClone.removeClass("item_template");
+        itemTemplateClone.removeAttr("hidden");
+
+        const title = itemTemplateClone.find("h3");
+        const price = itemTemplateClone.find(".caption p").eq(0);
+        const button = itemTemplateClone.find(".caption p .btn")
+        const img = itemTemplateClone.find("img");
+
+        for (const column of dataColumns) {
+            title.html(column.name);
+            price.html("$" + column.price / 100);
+            img.attr("src", imgRootDir + "/" + column.coverUrl);
+            button.attr("href", "detail.html" + "?id=" + column.id);
+            root_item.append(itemTemplateClone.clone());
+        }
+
+    }
+
+//    function init(current, countNumber) {
+//        $("#pager").zPager({
+//            pageCount: countNumber,
+//            pageData: 1,
+//            current: current,
+//            pageStep: 5,
+//            btnShow: true,
+//            ajaxSetData: false
+//        });
+//
+//    }
+
+
 
 
 })
 
-function displayGoods(root_item, itemTemplate, num, objects) {
 
-    root_item.empty();
-
-    itemTemplate.removeClass("item_template");
-    itemTemplate.removeAttr("hidden");
-
-    const title = itemTemplate.find("h3");
-    const price = itemTemplate.find(".caption p").eq(0);
-    const button = itemTemplate.find(".caption p .btn")
-    const img = itemTemplate.find("img");
-    // button.attr("data-id", "");
-    img.html()
-
-    console.log(itemTemplate)
-    for (let i = 0; i < num; i++) {
-        title.html(title.html() + i);
-        price.html(price.html() + i);
-
-        // img
-        button.attr("href", button.attr("href") + "?id=" + i);
-        root_item.append(itemTemplate.clone());
-    }
-}
 

@@ -1,5 +1,6 @@
 package team.light.cyberfarm.serviceImpl;
 
+import lombok.NonNull;
 import lombok.extern.java.Log;
 import org.apache.ibatis.session.SqlSession;
 import team.light.cyberfarm.entity.User;
@@ -10,9 +11,10 @@ import team.light.cyberfarm.tool.SqlSessionGetter;
 @Log
 public class AddUserImpl implements AddUser {
 
-    private final SqlSession session = SqlSessionGetter.getSession();
+
     @Override
     public int addUser(User user) {
+        SqlSession session = SqlSessionGetter.getSession();
         int result = 0;
         try {
             UserMapping mapper = session.getMapper(UserMapping.class);
@@ -21,6 +23,12 @@ public class AddUserImpl implements AddUser {
         } catch (Exception e) {
             log.warning(e.toString());
         }
+        session.close();
         return result;
+    }
+
+    public int addNormalUser(@NonNull User user) {
+        user.setLevel(1);
+        return addUser(user);
     }
 }

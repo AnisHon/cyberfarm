@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/goods.css">
 
-    <link rel="stylesheet" href="css/page.css">
+<!--    <link rel="stylesheet" href="css/page.css">-->
 </head>
 <body>
 
@@ -62,10 +62,10 @@
 
             <dl class="classification clearfix">
                 <dt>植物种类</dt>
-                <dd><a href="javascript:void(0)" data-id="0">水果</a></dd>
-                <dd class="active_item" data-id="1"><a href="javascript:void(0)">蔬菜</a></dd>
-                <dd><a href="javascript:void(0)" data-id="2">粮食作物</a></dd>
-                <dd><a href="javascript:void(0)" data-id="3">药用作物</a></dd>
+                <dd data-id="0" class="active_item"><a href="javascript:void(0)" data-id="0">水果</a></dd>
+                <dd data-id="1"><a href="javascript:void(0)" data-id="1">蔬菜</a></dd>
+                <dd data-id="2"><a href="javascript:void(0)" data-id="2">粮食作物</a></dd>
+                <dd data-id="3"><a href="javascript:void(0)" data-id="3">药用作物</a></dd>
             </dl>
 
 
@@ -96,10 +96,10 @@
 
 
             <!--            page navigation-->
-            <div style="text-align: center;margin:250px auto;">
-                <div id="pager" class="pager clearfix">
-                </div>
-            </div>
+<!--            <div style="text-align: center;margin:250px auto;">-->
+<!--                <div id="pager" class="pager clearfix">-->
+<!--                </div>-->
+<!--            </div>-->
             <!--            <nav aria-label="page" class="page_navigation">-->
             <!--                <ul class="pagination">-->
             <!--                    <li>-->
@@ -144,26 +144,14 @@
         integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
         crossorigin="anonymous"></script>
 <script src="js/goods.js"></script>
-<script src="js/jquery.z-pager.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript">
-    $("#pager").zPager({
-        pageCount: 0,
-        pageData: 1,
-        current: 1,
-        pageStep: 5,
-        btnShow: true,
-        ajaxSetData: false
-    });
+<!--<script src="js/jquery.z-pager.js" type="text/javascript" charset="utf-8"></script>-->
+<!--<script type="text/javascript">-->
 
-    function currentPage(currentPage) {
-        /*
-            触发页码数位置： Page/js/jquery.z-pager.js 64行
-        */
-        //todo
-        console.log("当前页码数：" + currentPage);
-    }
+<!--    function currentPage(currentPage) {-->
 
-</script>
+<!--           console.log("当前页码数：" + currentPage);-->
+<!--    }-->
+
 
 </body>
 </html>
