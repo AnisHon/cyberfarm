@@ -19,4 +19,5 @@ public class User {
 
     @Setter(AccessLevel.NONE)
     private Date createDate;
+
 }

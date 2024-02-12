@@ -5,5 +5,9 @@
 
 <mapper namespace="team.light.cyberfarm.mapping.UserMapping">
 
+<!--    User updateUserInfo(@Param("user")User user, @Param("id") Integer id);-->
+
+
+
 
 </mapper>

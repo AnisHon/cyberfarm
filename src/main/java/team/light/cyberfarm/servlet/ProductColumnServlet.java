@@ -30,11 +30,14 @@ public class ProductColumnServlet extends BaseServlet{
     public void selectAll(HttpServletRequest request, HttpServletResponse response) {
 
         try {
-            int begIndex = Integer.parseInt(request.getParameter("begin"));
+            int page = Integer.parseInt(request.getParameter("begin"));
             int limit = Integer.parseInt(request.getParameter("limit"));
             int category = Integer.parseInt(request.getParameter("category"));
 
-            String jsonString = JSON.toJSONString(displayGoods.selectToMap(category, begIndex, limit));
+
+            int beg = (page - 1) * limit;
+            if (beg < 0) return;
+            String jsonString = JSON.toJSONString(displayGoods.selectToMap(category, beg, limit));
             response.setContentType("text/json;charset=utf-8");
             response.getWriter().write(jsonString);
         } catch (NumberFormatException | IOException e) {

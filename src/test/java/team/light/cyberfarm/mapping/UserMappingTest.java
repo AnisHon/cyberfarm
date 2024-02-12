@@ -3,6 +3,8 @@ package team.light.cyberfarm.mapping;
 import com.alibaba.fastjson2.JSON;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.jupiter.api.Test;
+import team.light.cyberfarm.entity.User;
+import team.light.cyberfarm.serviceImpl.UserServiceImpl;
 import team.light.cyberfarm.tool.SqlSessionGetter;
 
 public class UserMappingTest {
@@ -40,5 +42,16 @@ public class UserMappingTest {
         System.out.println(mapper.selectUsernameByTel("114514"));
     }
 
+
+    @Test
+    public void updateUserInfoTest() {
+        UserServiceImpl userService = new UserServiceImpl();
+        User user = new User();
+        user.setTel("1230");
+        user.setUsername("NormalUser");
+        user.setPassword("Han123456");
+        user.setGender(2);
+        userService.changeUserInfo(user, 12);
+    }
 
 }

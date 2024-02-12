@@ -6,7 +6,7 @@ $(() => {
     const detail_text = goods_detail.children(".detail_text");
     const p = detail_text.children("p");
     const main_img = $(".goods_img .main");
-    
+    const countHidden = $("#countHidden");
     
 
     $("#add").click((event) => {
@@ -18,6 +18,7 @@ $(() => {
     $("#minus").click((event) => {
         if (Number(count.val()) - 1 > 0) {
             count.val(Number(count.val()) - 1 + '');
+
         }
         updatePrice();
     })
@@ -42,13 +43,16 @@ $(() => {
     }
 
     function updatePrice() {
+        countHidden.val(count.val())
         total_price.html(Number(price.html()) * Number(count.val()) + "");
     }
 
 
     let urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get('id');
-    
+
+    $("#id").val(productId);
+
     if (productId) {
         $.post("./detailProduct/selectProduct",
             {

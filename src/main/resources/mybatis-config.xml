@@ -28,7 +28,6 @@
         </environment>
     </environments>
     <mappers>
-
         <package name="team.light.cyberfarm.mapping"/>
     </mappers>
 </configuration>

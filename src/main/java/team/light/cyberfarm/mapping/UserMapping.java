@@ -27,4 +27,11 @@ public interface UserMapping {
     @Select("select username from user where tel = #{tel}")
     String selectUsernameByTel(String tel);
 
+    @Select("select * from user where id = #{id}")
+    User selectUserById(int id);
+
+
+
+    Integer aaa();
+
 }

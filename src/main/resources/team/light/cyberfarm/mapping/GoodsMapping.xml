@@ -19,7 +19,35 @@
 
 
 <!--    int getCategoryNum(int category);-->
-    <select id="getCategoryNum" resultType="Integer">
+    <select id="getCategoryNum" resultType="integer">
         select count(goods.category) from goods where category = #{category}
     </select>
+
+
+    <select id="aaa" resultType="integer">
+        select count(*) from user;
+    </select>
+
+
+    <update id="updateUserInfo" parameterType="map" flushCache="true">
+        UPDATE user
+        <set>
+
+            <if test="user.username != null">
+                username = #{user.username},
+            </if>
+            <if test="user.password != null">
+                password = #{user.password},
+            </if>
+            <if test="user.tel != null">
+                tel = #{user.tel},
+            </if>
+            <if test="user.gender != null">
+                gender = #{user.gender},
+            </if>
+        </set>
+        WHERE
+        id = #{id}
+    </update>
+
 </mapper>

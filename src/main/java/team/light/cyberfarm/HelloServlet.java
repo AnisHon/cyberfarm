@@ -6,11 +6,9 @@ import jakarta.servlet.annotation.*;
 
 @WebServlet(name = "helloServlet", value = "/hello-servlet")
 public class HelloServlet extends HttpServlet {
-    private String message;
 
-    public void init() {
-        message = "Hello 完全 World!";
-    }
+
+
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
@@ -20,8 +18,16 @@ public class HelloServlet extends HttpServlet {
         out.println("<html><body>");
         out.println("<h1>" + "本页用于测试用途" + "</h1>");
         out.println("</body></html>");
+
+//        UserServiceImpl userService = new UserServiceImpl();
+//        User user = new User();
+//        user.setTel("1230");
+//        user.setUsername("NormalUser");
+//        user.setPassword("Han123456");
+//        user.setGender(10);
+//        userService.changeUserInfo(user, 12);
+
+
     }
 
-    public void destroy() {
-    }
 }

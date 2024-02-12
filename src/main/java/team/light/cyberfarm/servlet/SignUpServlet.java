@@ -30,8 +30,8 @@ public class SignUpServlet extends HttpServlet {
                 return;
             }
             addUser.addNormalUser(user);
-            UserUtil.saveUserLogin(request.getSession(), user.getId(), user.getUsername(), user.getTel());
-            response.sendRedirect("./my_farm.html");
+            //UserUtil.saveUserLogin(request.getSession(), user.getId(), user.getUsername(), user.getTel());
+            response.sendRedirect("./login.html");
         } catch (NoSuchMethodException | InvocationTargetException | InstantiationException | IllegalAccessException e) {
             response.sendRedirect("./registration.html");
         }

@@ -43,8 +43,11 @@
                 <!--                <a class=".navbar-text .navbar-link navbar-right" href="">&#xeb24; AnisHan</a>-->
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="my_farm.html"><span>&#xeb24;</span> AnisHan</a></li>
-                    <li><a class="btn btn-default navbar-btn" href="login.html">登录</a></li>
+                    <li id="login" class="dont_display"><a href="my_farm.html"><span id="iconfont">&#xeb24;</span> <span id="username">AnisHan</span></a></li>
+                    <li id="not_login">
+
+                        <a href="login.html" type="button" class="btn btn-default navbar-btn ">登录</a>
+                    </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
 
@@ -92,23 +95,25 @@
 
         <div class="col-xs-12 col-md-3">
             <div class="row purchase">
-                <form method="post" action="#">
+                <form method="post" action="./cart/addCart">
                     <h4 class="post">下单</h4>
                     <div class="count">
 
+                        <input name="id" id="id" type="hidden">
+                        <input name="count" id="countHidden" type="hidden">
                         <button type="button" class="btn_minus" id="minus">-</button>
 
                         <label for="count"></label><input disabled="disabled" class="count_input" type="text" id="count"
                                                           value="1"
-                                                          name="count">
+                                                          >
                         <button type="button" class="btn_add" id="add">+</button>
                         <span>最大数量10</span>
 
 
                     </div>
 
-                    <h4 class="goods_name">转基因高产水稻</h4>
-                    <h4 class="goods_producer">湖北武汉老坛酸菜农场</h4>
+                    <h4 class="goods_name"></h4>
+                    <h4 class="goods_producer"></h4>
 
                     <span class="total clearfix">
                         <span class="text pull-left">合计</span>
@@ -128,9 +133,8 @@
 </div>
 
 <script src="lib/jquery.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"
-        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
-        crossorigin="anonymous"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
 <script src="js/detail.js"></script>
+<script src="js/navLogin.js"></script>
 </body>
 </html>

@@ -7,8 +7,7 @@
           content="width=device-width, initial-scale=1, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>我的农场</title>
     <link rel="shortcut icon" href="icons/index/genshin_impact.ico" type="image/x-icon">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"
-          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/my_farm.css">
 </head>
@@ -42,8 +41,8 @@
                     <li><a href="about_us.html">关于我们</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="dont_display"><a href="my_farm.html"><span>&#xeb24;</span> AnisHan</a></li>
-                    <li>
+                    <li id="login" class="dont_display"><a href="my_farm.html"><span id="iconfont">&#xeb24;</span> <span id="username">AnisHan</span></a></li>
+                    <li id="not_login">
 
                         <a href="login.html" type="button" class="btn btn-default navbar-btn ">登录</a>
                     </li>
@@ -131,13 +130,14 @@
 
                 <div class="panel-body">
                     <p>
-                        注：原本将会有头像系统，更真实好用的购物车系统，但是由于本页面全部采用Ajax前后端交互 +
-                        jQuery页面渲染并没有 采用主流的Vue，而且服务端没有学习Spring SpringBoot SpringMVC
-                        对于写过于复杂的业务逻辑将会是灾难级别 以及项目并不真正需要使用所以只能无奈放弃。<br>
+                        用JQuery渲染后端简直就是折磨<br>
+                        我真的受不了JS了<br>
+                        再也不想做前端了<br>
+                        如果某一端开发超过一个人了就学一下Git，代码托管到Github上，连不上就用Steam++(Walt Toolkit)
                     </p>
                     <br>
+                    <h3>不建议乱访问服务器servlet接口，因为没有做多余防护可能有BUG</h3>
 
-                    <h3>还有这一大段话是主要为了显得这里不那么空，服务器没有做多余防护可能有BUG</h3>
                 </div>
 
                 <!-- List group -->
@@ -148,6 +148,7 @@
                     </li>
                     <li class="list-group-item">创建时间：<span id="displayData" class="data"></span></li>
                     <li class="list-group-item">用户级别：<span id="displayLevel" class="level"></span></li>
+                    <li> <a type="submit" href="./user/logoutUser" class="btn btn-default">登出</a></li>
                 </ul>
             </div>
 
@@ -155,7 +156,7 @@
 
         <div role="tabpanel" class="tab-pane fade " id="change">
 
-            <form class="form-horizontal" style="margin-top: 40px" method="get" action="#">
+            <form class="form-horizontal" style="margin-top: 40px" method="get" action="./user/updateUserInfo">
                 <div class="form-group">
                     <label for="inputUsername" class="col-sm-2 control-label">用户名</label>
                     <div class="col-sm-10">
@@ -224,10 +225,9 @@
 </div>
 
 <script src="lib/jquery.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"
-        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
-        crossorigin="anonymous"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
 <script src="js/myFarm.js"></script>
+<script src="js/navLogin.js"></script>
 
 </body>
 

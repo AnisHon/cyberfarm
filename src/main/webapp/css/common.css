@@ -4,7 +4,12 @@
     url('../fonts/iconfont.woff?t=1707170425439') format('woff'),
     url('../fonts/iconfont.ttf?t=1707170425439') format('truetype');
 }
-
+#iconfont {
+    font-family: "iconfont", "Microsoft YaHei", serif;
+    font-size: 20px;
+    color: #456EEF;
+    vertical-align: middle;
+}
 
 .body {
     font: 16px/1.5 "Microsoft YaHei";
